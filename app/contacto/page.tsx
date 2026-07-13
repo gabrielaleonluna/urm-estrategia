@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 const services = [
   "Analítica de Datos",
@@ -144,8 +145,16 @@ function ContactForm() {
       </div>
 
       {status === "success" && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-          ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo en menos de 24 horas.
+        <div className="space-y-6">
+          <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
+            ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo en menos de 24 horas.
+          </div>
+          <div>
+            <h3 className="font-semibold text-navy mb-3">
+              ¿Prefieres agendar una llamada directamente?
+            </h3>
+            <CalendlyEmbed height={650} />
+          </div>
         </div>
       )}
       {status === "error" && (

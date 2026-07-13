@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/CTASection";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 
 export const metadata: Metadata = {
   title: "Casos de Éxito",
@@ -97,6 +98,14 @@ export default function CasosDeExitoPage() {
           <p className="text-slate-400 text-sm">
             Por razones de confidencialidad, los nombres de nuestros clientes están protegidos bajo acuerdo de no divulgación.
           </p>
+        </div>
+
+        <div className="mt-20 text-center">
+          <h2 className="section-title">Agenda una consultoría gratuita</h2>
+          <p className="section-subtitle mx-auto text-slate-500 mb-10">
+            Elige el horario que mejor se ajuste a tu agenda y conversemos sobre su proyecto.
+          </p>
+          <CalendlyEmbed />
         </div>
       </div>
 

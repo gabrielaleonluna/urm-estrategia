@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import BlogCard from "@/components/BlogCard";
+import CalendlyEmbed from "@/components/CalendlyEmbed";
 import { blogPosts } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
@@ -267,6 +268,17 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Schedule a consultation */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="section-title">Agenda una consultoría gratuita</h2>
+          <p className="section-subtitle mx-auto text-slate-500 mb-10">
+            Elige el horario que mejor se ajuste a tu agenda y conversemos sobre su proyecto.
+          </p>
+          <CalendlyEmbed />
         </div>
       </section>
 
