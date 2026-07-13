@@ -1,7 +1,7 @@
 "use client";
 
 export default function WhatsAppButton() {
-  const phone = "570000000000"; // Replace with actual number
+  const phone = "573188763878";
   const message = encodeURIComponent("Hola, me gustaría obtener más información sobre sus servicios de consultoría.");
 
   return (
